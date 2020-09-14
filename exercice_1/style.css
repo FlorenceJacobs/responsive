@@ -1,0 +1,47 @@
+*,
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    display: flex;
+}
+
+div * {
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 300px) {
+    body {
+        flex-direction : column;
+        background-color: red;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width:780px) {
+    body {
+        background-color: green;
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    #large {
+        grid-column: span 2;
+    }
+}
+
+
+@media only screen and (min-width: 780px) {
+    body {
+        flex-direction: row;
+        background-color: blue;
+        font-size: 18px;
+    }
+}
